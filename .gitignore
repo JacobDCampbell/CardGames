@@ -1,0 +1,11 @@
+tmp/
+**/.*
+**/*.pyc
+**/*.log
+**/ignore*.*
+/sandbox.py
+.DS_Store
+Thumbs.db
+
+# Always allow
+!**/.git*
