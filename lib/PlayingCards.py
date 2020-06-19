@@ -1,6 +1,6 @@
 import random
 
-class Cards(object):
+class NewDeck(object):
     def __init__(self):
         self.numeric_cards = list(range(2,11))
         self.face_cards = ["jack", "queen", "king", "ace"]

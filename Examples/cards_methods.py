@@ -8,10 +8,10 @@ import sys
     './lib', '../lib'
 ]]
 
-from PlayingCards import Cards
+from PlayingCards import NewDeck
 
 def main():
-    deck = Cards()
+    deck = NewDeck()
     card_pos = 46
 
     # Display Summary of all cards in deck
