@@ -1,6 +1,10 @@
 import random
 
 class NewDeck(object):
+    """
+    Represents a collection of CardObjects to simulate a deck of playing cards. Contains basic deck manipulation
+    methods to simulate how a deck of cards might be maniulated (e.g. adding / removing cards, shuffling, sorting, etc)
+    """
     def __init__(self):
         self.numeric_cards = list(range(2,11))
         self.face_cards = ["jack", "queen", "king", "ace"]
