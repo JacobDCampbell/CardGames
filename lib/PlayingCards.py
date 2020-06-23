@@ -2,8 +2,8 @@ import random
 
 class NewDeck(object):
     """
-    Represents a collection of CardObjects to simulate a deck of playing cards. Contains basic deck manipulation
-    methods to simulate how a deck of cards might be maniulated (e.g. adding / removing cards, shuffling, sorting, etc)
+    Represents a deck of playing cards with collection of CardObjects to represent individual playing cards and and
+    assortment of methods to simulate common deck manipulations (e.g. adding/removing cards, shuffling, sorting, etc)
     """
     def __init__(self):
         self.numeric_cards = list(range(2,11))
@@ -12,14 +12,14 @@ class NewDeck(object):
 
         for _suit in ["hearts", "diamonds", "spades", "clubs"]:
             for _rank in self.numeric_cards + self.face_cards:
-                self.cards.append(_CardObject(
+                self.cards.append(CardObject(
                     rank=_rank,
                     suit=_suit
                 ))
 
     def sort_cards_by_suit(self):
         """
-        Arranges self.cards by _CardObject.suit.
+        Arranges self.cards by CardObject.suit.
 
         :return: list
         """
@@ -33,10 +33,10 @@ class NewDeck(object):
 
     def pull_card(self, pos=None):
         """
-        Returns a _CardObject object from self.deck and removes that _CardObject object from the self.cards list.
+        Returns a CardObject object from self.deck and removes that CardObject object from the self.cards list.
         
         :param pos: List index position of card to be extracted. If not defined, a random index will be used.
-        :return: _CardObject object
+        :return: CardObject object
         """
         try:
             if pos is None:
@@ -63,14 +63,14 @@ class NewDeck(object):
 
     def get_random_card_index(self):
         """
-        Returns the list index for a randomly selected _CardObject object in self.cards
+        Returns the list index for a randomly selected CardObject object in self.cards
 
         :return: int
         """
         return random.randrange(0, len(self.cards))
 
 
-class _CardObject(object):
+class CardObject(object):
     """
     Object representing a single card.
     """
